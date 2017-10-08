@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1030</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QWidget" name="widget" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1030</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="minimumSize">
+    <size>
+     <width>417</width>
+     <height>468</height>
+    </size>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="features">
+    <set>QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string/>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout" stretch="2,1,1,1,3,2">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="2,0,1">
+         <item>
+          <widget class="QPushButton" name="logo">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/images/logo.png</normaloff>:/images/logo.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>150</width>
+             <height>75</height>
+            </size>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="quitPushbutton">
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/images/quit.png</normaloff>:/images/quit.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>50</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QPushButton" name="drawpushButton">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(207, 207, 207);</string>
+           </property>
+           <property name="text">
+            <string>Draw</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="setpushButton">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(207, 207, 207);</string>
+           </property>
+           <property name="text">
+            <string>Set</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="undopushButton">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(207, 207, 207);</string>
+           </property>
+           <property name="text">
+            <string>Undo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="sourcepushButton">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(207, 207, 207);</string>
+           </property>
+           <property name="text">
+            <string>Change Source</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,1,1,1,1,1">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="topMargin">
+           <number>9</number>
+          </property>
+          <property name="bottomMargin">
+           <number>9</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="Nodule_1">
+            <property name="styleSheet">
+             <string notr="true">font: 16pt &quot;Ubuntu&quot;;
+color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>Nodule_1</string>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit11">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit12">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit13">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit14">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit15">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+         <zorder>lineEdit11</zorder>
+         <zorder>Nodule_1</zorder>
+         <zorder>lineEdit12</zorder>
+         <zorder>lineEdit13</zorder>
+         <zorder>lineEdit14</zorder>
+         <zorder>lineEdit15</zorder>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_2">
+   <property name="features">
+    <set>QDockWidget::NoDockWidgetFeatures</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::RightDockWidgetArea</set>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <layout class="QVBoxLayout" name="verticalLayout_10" stretch="4,0,4,1">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string/>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_8" stretch="2,2,2,2,2,2">
+          <item>
+           <widget class="QPushButton" name="Nodule_2">
+            <property name="styleSheet">
+             <string notr="true">font: 16pt &quot;Ubuntu&quot;;
+color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>Nodule_2</string>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit21">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit22">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit23">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit24">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit25">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_9" stretch="2,2,2,2,2,2">
+          <item>
+           <widget class="QPushButton" name="Nodule_3">
+            <property name="styleSheet">
+             <string notr="true">font: 16pt &quot;Ubuntu&quot;;
+color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>Nodule_3</string>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit31">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit32">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit33">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit34">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit35">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(31, 17, 17);
+background-color: rgb(255, 255, 255);</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

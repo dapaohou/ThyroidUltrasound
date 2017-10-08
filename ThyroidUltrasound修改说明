@@ -1,0 +1,17 @@
+——2017.9.15——
+  USB采集卡需要在开机后再插上电脑，或者重新插拔，才可以正常读取图像，原因未知。
+  开发平台 Qt 5.6.2
+1.
+软件使用了libuvc库，安装方法：  https://int80k.com/libuvc/doc/index.html
+安装完成后用ldconfig更新库。
+2.
+读取采集卡需要root权限，因此在调试的时候需要在root下打开QT Creator,我的方法是找到QT creator所在的文件夹，如 /home/lizecheng/Qt5.6.2/Tools/QtCreator/bin，然后使用sudo ./qtcreator命令打开。
+3.
+打开QT creator后，打开项目文件ThyroidUltrasound8.pro，QT 便会自动加载项目。调试前需要修改opencv,libuvc头文件包含和库，将其改为本机所在目录即可，默认情况是在/usr/local/include和/usr/local/lib中。
+ 4.
+软件修改.
+（1）算法。接口为ithyroidwrapper.h。
+（2）视频输入分辨率、帧率修改在mainwindow.cpp的setupVideo函数中,修改其调用的uvc_get_stream_ctrl_format_size函数参数即可。
+5.
+将采集卡退出的函数放到了stopVideo函数中，点击退出按钮时，先停止流，再关闭窗口，不然第二次打开时不时会崩溃。
+6.新增draw，set，undo三个按钮，以后要增加勾画显示区域的功能。
